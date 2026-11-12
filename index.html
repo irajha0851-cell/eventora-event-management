@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover, explore and book memorable events with Eventora.">
+  <title>Eventora — Find Your Next Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#"><span class="brand-mark">e</span> eventora<span class="brand-dot">.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav id="navLinks">
+      <a href="#events">Explore events</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button class="nav-cta" id="navBook">Host an event</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">MAKE EVERY MOMENT COUNT</p>
+        <h1>Find your people.<br><em>Feel the moment.</em></h1>
+        <p class="hero-copy">From live music to creative workshops, discover experiences worth stepping out for.</p>
+        <a class="primary-btn" href="#events">Explore events <span>↗</span></a>
+        <div class="hero-note"><span class="avatar-stack"><i>✦</i><i>♫</i><i>☼</i></span><span><b>2,400+</b> people found their next favourite event</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-image"></div>
+        <div class="floating-card"><span class="live-dot"></span><div><b>Something exciting</b><small>is happening near you</small></div><span class="sparkle">✳</span></div>
+        <div class="hero-stamp">GOOD<br>VIBES<br>ONLY</div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <span>DISCOVER LOCAL EXPERIENCES</span><span>✳</span><span>MEET YOUR COMMUNITY</span><span>✳</span><span>MAKE MEMORIES</span>
+    </section>
+
+    <section class="events-section section-wrap" id="events">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE GOOD STUFF</p><h2>Upcoming <em>events</em></h2></div>
+        <p class="section-description">A little something for every kind of curious.</p>
+      </div>
+      <div class="event-tools">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search events, places..."></label>
+        <div class="filters" id="filters">
+          <button class="filter active" data-category="All">All events</button>
+          <button class="filter" data-category="Music">Music</button>
+          <button class="filter" data-category="Workshop">Workshops</button>
+          <button class="filter" data-category="Art">Art & culture</button>
+          <button class="filter" data-category="Food">Food</button>
+        </div>
+      </div>
+      <div class="event-grid" id="eventGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>No events match your search. Try another keyword.</p>
+    </section>
+
+    <section class="host-banner section-wrap" id="about">
+      <div><p class="eyebrow">HAVE SOMETHING IN MIND?</p><h2>Your event.<br><em>Your people.</em></h2><p>Bring people together around an idea, a passion, or just a really good time.</p><button class="light-btn" id="hostBtn">Let's make it happen ↗</button></div>
+      <div class="host-decoration"><span>✳</span><b>CREATE<br>CONNECTIONS</b><small>one event at a time</small></div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">e</span> eventora<span class="brand-dot">.</span></a>
+    <p>Made for moments that matter.</p>
+    <div><a href="mailto:hello@eventora.example">hello@eventora.example</a><span>© <span id="year"></span> Eventora</span></div>
+  </footer>
+
+  <dialog id="bookingDialog">
+    <button class="dialog-close" id="closeDialog" aria-label="Close">×</button>
+    <p class="eyebrow" id="dialogEyebrow">SAVE YOUR SPOT</p>
+    <h2 id="dialogTitle">Book an event</h2>
+    <p class="dialog-subtitle" id="dialogSubtitle">A few details and you're on the list.</p>
+    <form id="bookingForm">
+      <label>Your name<input name="name" required placeholder="Full name"></label>
+      <label>Email address<input name="email" type="email" required placeholder="you@example.com"></label>
+      <label>Number of tickets<select name="tickets"><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+      <button class="primary-btn form-submit" type="submit">Confirm booking ↗</button>
+    </form>
+    <p class="form-message" id="formMessage" role="status"></p>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
